@@ -2,7 +2,7 @@
 
 * [简介](README.md)
 * [安装](install/README.md)
-  * [Node.js](install/node.md)
+  * [Node.js](install/install_node.md)
   * [GitBook](install/gitbook.md)
   * [GitBook Editor](install/gitbook_editor.md)
 * [使用](use/README.md)
@@ -14,5 +14,5 @@
   * [主题](plugin/plugin_theme.md)
   * [目录增强](plugin/plugin_table.md)
   * [评论](plugin/plugin_discuss.md)
-* [持续集成&部署](cicd/README.md)
+* [持续集成&部署](ci/README.md)
 
