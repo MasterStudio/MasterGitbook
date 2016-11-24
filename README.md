@@ -36,12 +36,6 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [Gitbook在私有gitlab上持续集成](http://www.jianshu.com/p/e650aac83f7a)
 
 
-## Gitbook插件
-
-### 1. 主题插件
-
-- [ComScore](https://www.npmjs.com/package/gitbook-plugin-theme-comscore) - 一个彩色主题，标题为蓝色
-
 ### 2. 实用插件
 
 - [Disqus](https://github.com/GitbookIO/plugin-disqus) - 集成评论系统
