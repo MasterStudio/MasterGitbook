@@ -15,5 +15,13 @@
  - Summary.md 格式
 
 
+* [Gitbook 使用入门](https://tonydeng.github.io/gitbook-zh/gitbook-howtouse)
+
+ - 本身用Gitbook呈现
+ - 输出PDF
+ - 发布到GitHub Pages
+ - 通过sync发布到私有文档服务器
+ 
+
 
 
