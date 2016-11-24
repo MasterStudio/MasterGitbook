@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '5'
+branches:
+  only:
+  - master
+install: npm install -g gitbook-cli
+before_script: gitbook install
+script: gitbook build
+after_success:
+- bash deploy.sh
+env:
+  global:
+  - GH_REF: github.com/Master-Wang/awesome-gitbook.git
+  - secure: PMjy5Cv4fo5CLjco0dd/hNkxGIes8wFcPkZ5ptPxGX56OgplQu+whkgiInUjVUUoY3Y9sZ2wNnI1siDOODdl598oJ03HScW2/gx1fTYIrRW+9Qe4J5L1S+Blsuv/WYgzMu9arfVKPcE8q+947LOgZ4N2Z5I63zVDC9eWRJp02K0sxsHofBQ6TeeiayZ19w84Iay0UdDmloEQ9qJxv/T06ynzqqjdjWw33eeEDp+yxdqQfJhXo402oFCSBPzLNMxWa+8Xc4G7LuXca2XMUgeNWXI0s9cOZAMqeDZMx41obNtATnGdUuaSiWHGH//MHfnv0NRQU3tSaOetWq1QovbeWnXEtRR4F9PXLQG+GjSV2rDMorzlpU9Gi9+702vjguSNcSmCBPvXIyJ7tUtW5ViwrmIMSIUAiF+xQtErOZHLhYghrl2d3SlYJWFPf8OV8B5f3otw6Ymb3HKybCw8XRKmyLniqBR/nswjoDzmjOXO1LP0ETuhWDuLztk5dkrnLKEpYC9yKUa1OrG8RvxX5TQ+nFLY3wdWW2Di0Nbadu8XGhwURVcWF/aqcazxFlhjSCxJuQEavhlvPVBmUW9LoRDpOk5yBO8QsVZiWoJOUxhN8sR6a8JUt4v8WwO6P/PgMljYAvyKb8/L7tA/7sjb9h0otBMJoek/FA8jtFsuzePIFsA=
