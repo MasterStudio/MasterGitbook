@@ -1,4 +1,4 @@
-## Gitbook发布
+## Gitbook持续集成&发布
 
 ### 1. 结合Github Pages
 
