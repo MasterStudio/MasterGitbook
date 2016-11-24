@@ -1,15 +1,24 @@
 language: node_js
 node_js:
-- '5'
+- '6'
 branches:
   only:
   - master
-install: npm install -g gitbook-cli
-before_script: gitbook install
-script: gitbook build
+install:
+- npm install -g gitbook-cli
+before_script:
+- gitbook install
+script:
+- gitbook build
 after_success:
-- bash deploy.sh
+- cd _book
+- git config --global user.name 'wangyf'
+- git config --global user.email 'zgtjwyftc@gmail.com'
+- git init
+- git add .
+- git commit -m "Deploy to GitHub Pages"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 env:
   global:
   - GH_REF: github.com/Master-Wang/awesome-gitbook.git
-  - secure: PMjy5Cv4fo5CLjco0dd/hNkxGIes8wFcPkZ5ptPxGX56OgplQu+whkgiInUjVUUoY3Y9sZ2wNnI1siDOODdl598oJ03HScW2/gx1fTYIrRW+9Qe4J5L1S+Blsuv/WYgzMu9arfVKPcE8q+947LOgZ4N2Z5I63zVDC9eWRJp02K0sxsHofBQ6TeeiayZ19w84Iay0UdDmloEQ9qJxv/T06ynzqqjdjWw33eeEDp+yxdqQfJhXo402oFCSBPzLNMxWa+8Xc4G7LuXca2XMUgeNWXI0s9cOZAMqeDZMx41obNtATnGdUuaSiWHGH//MHfnv0NRQU3tSaOetWq1QovbeWnXEtRR4F9PXLQG+GjSV2rDMorzlpU9Gi9+702vjguSNcSmCBPvXIyJ7tUtW5ViwrmIMSIUAiF+xQtErOZHLhYghrl2d3SlYJWFPf8OV8B5f3otw6Ymb3HKybCw8XRKmyLniqBR/nswjoDzmjOXO1LP0ETuhWDuLztk5dkrnLKEpYC9yKUa1OrG8RvxX5TQ+nFLY3wdWW2Di0Nbadu8XGhwURVcWF/aqcazxFlhjSCxJuQEavhlvPVBmUW9LoRDpOk5yBO8QsVZiWoJOUxhN8sR6a8JUt4v8WwO6P/PgMljYAvyKb8/L7tA/7sjb9h0otBMJoek/FA8jtFsuzePIFsA=
+  - secure: RnWu+LXXH2c/CpKYpyNQ/fCSPsqfwswn9Dga00Vsr7Gp11doPFUkj5onn2fBqurb/9L6LC8kdTi1n7kmU26GJYkARK+tlX8cdI459LYm21ICNJT1Fxu8G9WsfZNcykIs7XAgn4rrvJypwe/7pEs5wPdsprJPpVe+uTxNBv0VBigJgymk2CYiYPKvc0nfupExaba+ENsyJyTaq9P/fnAFolnyNS8L3F9L+VPBeZ01S8Raxg3s/4LfCvFVwRhhGJFS7Njz7QUibumiyugJdagUH8oqGDiDuTnTCQRBNXBqH0AtO0BWGe2jRWLRwVvv1HjM3j3h2nhnPpmhx2IBw/V1eOZ940mb0niStpBrlsREBkCM01hmZEeubFvbrTRMjgYigww/agIQbzWAHIeUq8snWoTHGLUyj3YyYKhCZpaIcmLnq8TA2vF6N7pmwNtLrtrHuQ2ypiur8S3DIdWsr8wXmzSmZKc11AnvsiDBIaC+lQv+8LnizMGfVQBrKgkkDQIbEjTEzwy2eOoBtauNV1LusW2Vr84NPrjM2DEF4VXcLDek28A1jLI7uh3NJi0fVkF3JNKtkseO4CPYV1bUiCYm6hinmUwfMJ8GtzG0x6zgYJYQW5vObhhLWh/SoxrYRaIPPrjqgUC8PQ7UWWthnoZAtSboMYExhUIUtZ6H/oF3hj0=
