@@ -1,2 +1,2 @@
-# Section1.2
+# Gitbook Editor安装
 
