@@ -1,5 +1,10 @@
 # Gitbook其他教程
 
+## 官方指导
+
+- [Tool Chain](https://toolchain.gitbook.com/)
+- [Help Center](https://help.gitbook.com/)
+
 ## [GitBook 简明教程](http://www.chengweiyang.cn/gitbook)
 
 - 本教程主要围绕 GitBook 的安装，使用，集成，书籍发布，个性化以及实用插件
@@ -19,3 +24,8 @@
 - 输出PDF
 - 发布到GitHub Pages
 - 通过sync发布到私有文档服务器
+
+## [Gitbook 入门教程](https://github.com/yuzeshan/gitbook-studying)
+
+- 几乎同上一个教程
+- 关于部署的文章
